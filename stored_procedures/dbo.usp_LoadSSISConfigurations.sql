@@ -95,10 +95,10 @@ SELECT c.*
 
     -- 2) Solution Level Configurations
 
-	-- 2.1) LDSBC_IT243_xx  
+	-- 2.1) LDSBC_IT243_lg 
 	
 	DELETE FROM dbo.[SSIS Configurations]
-     WHERE ConfigurationFilter = 'LDSBC_IT243_xx';
+     WHERE ConfigurationFilter = 'LDSBC_IT243_lg';
 	
 
 	-- 2.1.1) v_data_share_root
@@ -109,8 +109,8 @@ SELECT c.*
                                         , ConfiguredValueType)
     VALUES
           (
-           'LDSBC_IT243_xx'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+           'LDSBC_IT243_lg'
+		 , 'C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
@@ -121,10 +121,10 @@ SELECT c.*
     -- 3) Package level configurations
 
 
-    -- 3.1) SSIS_PDS_Template_xx
+    -- 3.1) SSIS_PDS_Template_lg
 
     DELETE FROM dbo.[SSIS Configurations]
-     WHERE ConfigurationFilter = 'SSIS_PDS_Template_xx';
+     WHERE ConfigurationFilter = 'SSIS_PDS_Template_lg';
 	
 
 	-- 3.1.1) v_data_share_root
@@ -135,18 +135,18 @@ SELECT c.*
                                         , ConfiguredValueType)
     VALUES
           (
-           'SSIS_PDS_Template_xx'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+           'SSIS_PDS_Template_lg'
+		 , 'C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
 
 
 
-    -- 3.2) LoadDFNB3_xx
+    -- 3.2) LoadDFNB3_lg
 
     DELETE FROM dbo.[SSIS Configurations]
-     WHERE ConfigurationFilter = 'LoadDFNB3_xx';
+     WHERE ConfigurationFilter = 'LoadDFNB3_lg';
 	
 
 	-- 3.1.1) v_data_share_root
@@ -157,8 +157,8 @@ SELECT c.*
                                         , ConfiguredValueType)
     VALUES
           (
-           'LoadDFNB3_xx'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+           'LoadDFNB3_lg'
+		 , 'C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
