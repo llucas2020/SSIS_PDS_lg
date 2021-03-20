@@ -23,8 +23,8 @@ PURPOSE: Load the SSIS Configurations table
 MODIFICATION LOG:
 Ver      Date        Author           Description
 -------  ----------  ---------------  ------------------------------------------------------------------------
-1.0      11/03/2019  JJAUSSI          1. Created this process for LDS BC IT243
-
+1.0      3/19/2021  llucas2020       1. Created this process for LDS BC IT243
+2.0      3/19/2021  llucas2020       2. Added enhancements for DFNB3
 
 
 RUNTIME: 
@@ -75,7 +75,7 @@ SELECT c.*
           );
 
 
-    -- 1.2) conn_DFNB
+    -- 1.2) conn_DFNB3
 
     INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
                                         , ConfiguredValue

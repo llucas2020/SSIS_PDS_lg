@@ -12,11 +12,23 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{72E9EDE7-49BA-4F6D-A827-7C69E2920FEE}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{844FE867-C296-473B-9E58-0AAAC1325C8A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DFNB3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8BA8989F-93EF-466E-9DA7-44C3D8E9C001}"
+      DTS:ObjectName="DFNB3">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::conn_DFNB3]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=DFNB3;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[EXM]"
       DTS:CreationName="OLEDB"
@@ -81,6 +93,15 @@
       DTS:ObjectName="BatchLogID">
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{28FEFCB3-6E07-4040-812C-525C868982BF}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_DFNB3">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=DFNB3;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -160,7 +181,7 @@
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="MsgBox check variable"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <ScriptProject
@@ -851,6 +872,1818 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ObjectName="Test Connection Menagers">
           <DTS:Variables />
           <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Test Connection Menagers\DFNB3"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{F337C40F-64F6-4890-80A8-A2F222DF04AF}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="DFNB3"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3"
+                      componentClassID="Microsoft.OLEDBSource"
+                      contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                      description="OLE DB Source"
+                      name="DFNB3"
+                      usesDispositions="true"
+                      version="7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[dbo].[stg_p1]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.String"
+                          description="The variable that contains the SQL command to be executed."
+                          name="SqlCommandVariable"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">0</property>
+                        <property
+                          dataType="System.String"
+                          description="The mappings between the parameters in the SQL command and variables."
+                          name="ParameterMapping"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[DFNB3]"
+                          connectionManagerRefId="Package.ConnectionManagers[DFNB3]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output]"
+                          name="OLE DB Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id]"
+                              name="acct_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_id]"
+                              name="cust_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_cust_role_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_cust_role_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_cust_role_id]"
+                              name="acct_cust_role_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id2]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_id2]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id2]"
+                              name="acct_id2"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[prod_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[prod_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[prod_id]"
+                              name="prod_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[open_date]"
+                              dataType="dbDate"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[open_date]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[open_date]"
+                              name="open_date"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[close_date]"
+                              dataType="dbDate"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[close_date]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[close_date]"
+                              name="close_date"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[open_close_code]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[open_close_code]"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[open_close_code]"
+                              name="open_close_code"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[branch_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[branch_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[branch_id]"
+                              name="branch_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_rel_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_rel_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_rel_id]"
+                              name="acct_rel_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[pri_cust_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[pri_cust_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[pri_cust_id]"
+                              name="pri_cust_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[loan_amt]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[loan_amt]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[loan_amt]"
+                              name="loan_amt"
+                              precision="20"
+                              scale="4"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_id]"
+                              name="acct_branch_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_code]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_code]"
+                              length="5"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_code]"
+                              name="acct_branch_code"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_desc]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_desc]"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_desc]"
+                              name="acct_branch_desc"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_region_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_region_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_region_id]"
+                              name="acct_region_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_area_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_area_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_area_id]"
+                              name="acct_area_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_lat]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_lat]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_lat]"
+                              name="acct_branch_lat"
+                              precision="16"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_lon]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_lon]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_lon]"
+                              name="acct_branch_lon"
+                              precision="16"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_add_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_id]"
+                              name="acct_branch_add_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_lat]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_add_lat]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_lat]"
+                              name="acct_branch_add_lat"
+                              precision="16"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_lon]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_add_lon]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_lon]"
+                              name="acct_branch_add_lon"
+                              precision="16"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_type]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_add_type]"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_type]"
+                              name="acct_branch_add_type"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_id2]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_id2]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_id2]"
+                              name="cust_id2"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[last_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[last_name]"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[last_name]"
+                              name="last_name"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[first_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[first_name]"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[first_name]"
+                              name="first_name"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[gender]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[gender]"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[gender]"
+                              name="gender"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[birth_date]"
+                              dataType="dbDate"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[birth_date]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[birth_date]"
+                              name="birth_date"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_since_date]"
+                              dataType="dbDate"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_since_date]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_since_date]"
+                              name="cust_since_date"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[pri_branch_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[pri_branch_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[pri_branch_id]"
+                              name="pri_branch_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_pri_branch_dist]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_pri_branch_dist]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_pri_branch_dist]"
+                              name="cust_pri_branch_dist"
+                              precision="7"
+                              scale="2"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_lat]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_lat]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_lat]"
+                              name="cust_lat"
+                              precision="16"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_lon]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_lon]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_lon]"
+                              name="cust_lon"
+                              precision="16"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_rel_id]"
+                              dataType="i2"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_rel_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_rel_id]"
+                              name="cust_rel_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_add_id]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_id]"
+                              name="cust_add_id"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_lat]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_add_lat]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_lat]"
+                              name="cust_add_lat"
+                              precision="16"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_lon]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_add_lon]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_lon]"
+                              name="cust_add_lon"
+                              precision="16"
+                              scale="12"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_type]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_add_type]"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_type]"
+                              name="cust_add_type"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[as_of_date]"
+                              dataType="dbDate"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[as_of_date]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[as_of_date]"
+                              name="as_of_date"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id3]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_id3]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id3]"
+                              name="acct_id3"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cur_bal]"
+                              dataType="numeric"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cur_bal]"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cur_bal]"
+                              name="cur_bal"
+                              precision="20"
+                              scale="4"
+                              truncationRowDisposition="FailComponent" />
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_id]"
+                              dataType="i4"
+                              name="acct_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_id]"
+                              dataType="i2"
+                              name="cust_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_cust_role_id]"
+                              dataType="i2"
+                              name="acct_cust_role_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_id2]"
+                              dataType="i4"
+                              name="acct_id2" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[prod_id]"
+                              dataType="i2"
+                              name="prod_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[open_date]"
+                              dataType="dbDate"
+                              name="open_date" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[close_date]"
+                              dataType="dbDate"
+                              name="close_date" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[open_close_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              name="open_close_code" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[branch_id]"
+                              dataType="i2"
+                              name="branch_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_rel_id]"
+                              dataType="i2"
+                              name="acct_rel_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[pri_cust_id]"
+                              dataType="i2"
+                              name="pri_cust_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[loan_amt]"
+                              dataType="numeric"
+                              name="loan_amt"
+                              precision="20"
+                              scale="4" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_id]"
+                              dataType="i2"
+                              name="acct_branch_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              name="acct_branch_code" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_desc]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              name="acct_branch_desc" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_region_id]"
+                              dataType="i4"
+                              name="acct_region_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_area_id]"
+                              dataType="i4"
+                              name="acct_area_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_lat]"
+                              dataType="numeric"
+                              name="acct_branch_lat"
+                              precision="16"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_lon]"
+                              dataType="numeric"
+                              name="acct_branch_lon"
+                              precision="16"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_add_id]"
+                              dataType="i4"
+                              name="acct_branch_add_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_add_lat]"
+                              dataType="numeric"
+                              name="acct_branch_add_lat"
+                              precision="16"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_add_lon]"
+                              dataType="numeric"
+                              name="acct_branch_add_lon"
+                              precision="16"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_branch_add_type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              name="acct_branch_add_type" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_id2]"
+                              dataType="i2"
+                              name="cust_id2" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[last_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              name="last_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[first_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              name="first_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[gender]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              name="gender" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[birth_date]"
+                              dataType="dbDate"
+                              name="birth_date" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_since_date]"
+                              dataType="dbDate"
+                              name="cust_since_date" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[pri_branch_id]"
+                              dataType="i2"
+                              name="pri_branch_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_pri_branch_dist]"
+                              dataType="numeric"
+                              name="cust_pri_branch_dist"
+                              precision="7"
+                              scale="2" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_lat]"
+                              dataType="numeric"
+                              name="cust_lat"
+                              precision="16"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_lon]"
+                              dataType="numeric"
+                              name="cust_lon"
+                              precision="16"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_rel_id]"
+                              dataType="i2"
+                              name="cust_rel_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_add_id]"
+                              dataType="i4"
+                              name="cust_add_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_add_lat]"
+                              dataType="numeric"
+                              name="cust_add_lat"
+                              precision="16"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_add_lon]"
+                              dataType="numeric"
+                              name="cust_add_lon"
+                              precision="16"
+                              scale="12" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cust_add_type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              name="cust_add_type" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[as_of_date]"
+                              dataType="dbDate"
+                              name="as_of_date" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[acct_id3]"
+                              dataType="i4"
+                              name="acct_id3" />
+                            <externalMetadataColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].ExternalColumns[cur_bal]"
+                              dataType="numeric"
+                              name="cur_bal"
+                              precision="20"
+                              scale="4" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output]"
+                          isErrorOut="true"
+                          name="OLE DB Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_id]"
+                              name="acct_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_id]"
+                              name="cust_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_cust_role_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_cust_role_id]"
+                              name="acct_cust_role_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_id2]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_id2]"
+                              name="acct_id2" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[prod_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[prod_id]"
+                              name="prod_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[open_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[open_date]"
+                              name="open_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[close_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[close_date]"
+                              name="close_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[open_close_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[open_close_code]"
+                              name="open_close_code" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[branch_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[branch_id]"
+                              name="branch_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_rel_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_rel_id]"
+                              name="acct_rel_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[pri_cust_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[pri_cust_id]"
+                              name="pri_cust_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[loan_amt]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[loan_amt]"
+                              name="loan_amt"
+                              precision="20"
+                              scale="4" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_id]"
+                              name="acct_branch_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_code]"
+                              name="acct_branch_code" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_desc]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_desc]"
+                              name="acct_branch_desc" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_region_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_region_id]"
+                              name="acct_region_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_area_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_area_id]"
+                              name="acct_area_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_lat]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_lat]"
+                              name="acct_branch_lat"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_lon]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_lon]"
+                              name="acct_branch_lon"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_add_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_add_id]"
+                              name="acct_branch_add_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_add_lat]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_add_lat]"
+                              name="acct_branch_add_lat"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_add_lon]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_add_lon]"
+                              name="acct_branch_add_lon"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_add_type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_branch_add_type]"
+                              name="acct_branch_add_type" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_id2]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_id2]"
+                              name="cust_id2" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[last_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[last_name]"
+                              name="last_name" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[first_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[first_name]"
+                              name="first_name" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[gender]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[gender]"
+                              name="gender" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[birth_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[birth_date]"
+                              name="birth_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_since_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_since_date]"
+                              name="cust_since_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[pri_branch_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[pri_branch_id]"
+                              name="pri_branch_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_pri_branch_dist]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_pri_branch_dist]"
+                              name="cust_pri_branch_dist"
+                              precision="7"
+                              scale="2" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_lat]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_lat]"
+                              name="cust_lat"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_lon]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_lon]"
+                              name="cust_lon"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_rel_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_rel_id]"
+                              name="cust_rel_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_add_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_add_id]"
+                              name="cust_add_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_add_lat]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_add_lat]"
+                              name="cust_add_lat"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_add_lon]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_add_lon]"
+                              name="cust_add_lon"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_add_type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cust_add_type]"
+                              name="cust_add_type" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[as_of_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[as_of_date]"
+                              name="as_of_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_id3]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[acct_id3]"
+                              name="acct_id3" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cur_bal]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[cur_bal]"
+                              name="cur_bal"
+                              precision="20"
+                              scale="4" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All"
+                      componentClassID="Microsoft.UnionAll"
+                      contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+                      name="Union All"
+                      version="1">
+                      <inputs>
+                        <input
+                          refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1]"
+                          name="Union All Input 1">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_id]"
+                              cachedDataType="i4"
+                              cachedName="acct_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_id]"
+                              cachedDataType="i2"
+                              cachedName="cust_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_cust_role_id]"
+                              cachedDataType="i2"
+                              cachedName="acct_cust_role_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_cust_role_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_cust_role_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_id2]"
+                              cachedDataType="i4"
+                              cachedName="acct_id2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id2]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id2]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[prod_id]"
+                              cachedDataType="i2"
+                              cachedName="prod_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[prod_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[prod_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[open_date]"
+                              cachedDataType="dbDate"
+                              cachedName="open_date"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[open_date]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[open_date]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[close_date]"
+                              cachedDataType="dbDate"
+                              cachedName="close_date"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[close_date]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[close_date]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[open_close_code]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="1"
+                              cachedName="open_close_code"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[open_close_code]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[open_close_code]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[branch_id]"
+                              cachedDataType="i2"
+                              cachedName="branch_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[branch_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[branch_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_rel_id]"
+                              cachedDataType="i2"
+                              cachedName="acct_rel_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_rel_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_rel_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[pri_cust_id]"
+                              cachedDataType="i2"
+                              cachedName="pri_cust_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[pri_cust_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[pri_cust_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[loan_amt]"
+                              cachedDataType="numeric"
+                              cachedName="loan_amt"
+                              cachedPrecision="20"
+                              cachedScale="4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[loan_amt]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[loan_amt]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_id]"
+                              cachedDataType="i2"
+                              cachedName="acct_branch_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_code]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="5"
+                              cachedName="acct_branch_code"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_code]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_code]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_desc]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="100"
+                              cachedName="acct_branch_desc"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_desc]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_desc]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_region_id]"
+                              cachedDataType="i4"
+                              cachedName="acct_region_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_region_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_region_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_area_id]"
+                              cachedDataType="i4"
+                              cachedName="acct_area_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_area_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_area_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_lat]"
+                              cachedDataType="numeric"
+                              cachedName="acct_branch_lat"
+                              cachedPrecision="16"
+                              cachedScale="12"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_lat]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_lat]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_lon]"
+                              cachedDataType="numeric"
+                              cachedName="acct_branch_lon"
+                              cachedPrecision="16"
+                              cachedScale="12"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_lon]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_lon]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_add_id]"
+                              cachedDataType="i4"
+                              cachedName="acct_branch_add_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_add_lat]"
+                              cachedDataType="numeric"
+                              cachedName="acct_branch_add_lat"
+                              cachedPrecision="16"
+                              cachedScale="12"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_lat]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_lat]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_add_lon]"
+                              cachedDataType="numeric"
+                              cachedName="acct_branch_add_lon"
+                              cachedPrecision="16"
+                              cachedScale="12"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_lon]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_lon]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_branch_add_type]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="1"
+                              cachedName="acct_branch_add_type"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_branch_add_type]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_type]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_id2]"
+                              cachedDataType="i2"
+                              cachedName="cust_id2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_id2]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_id2]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[last_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="100"
+                              cachedName="last_name"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[last_name]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[last_name]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[first_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="100"
+                              cachedName="first_name"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[first_name]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[first_name]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[gender]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="1"
+                              cachedName="gender"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[gender]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[gender]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[birth_date]"
+                              cachedDataType="dbDate"
+                              cachedName="birth_date"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[birth_date]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[birth_date]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_since_date]"
+                              cachedDataType="dbDate"
+                              cachedName="cust_since_date"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_since_date]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_since_date]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[pri_branch_id]"
+                              cachedDataType="i2"
+                              cachedName="pri_branch_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[pri_branch_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[pri_branch_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_pri_branch_dist]"
+                              cachedDataType="numeric"
+                              cachedName="cust_pri_branch_dist"
+                              cachedPrecision="7"
+                              cachedScale="2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_pri_branch_dist]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_pri_branch_dist]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_lat]"
+                              cachedDataType="numeric"
+                              cachedName="cust_lat"
+                              cachedPrecision="16"
+                              cachedScale="12"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_lat]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_lat]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_lon]"
+                              cachedDataType="numeric"
+                              cachedName="cust_lon"
+                              cachedPrecision="16"
+                              cachedScale="12"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_lon]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_lon]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_rel_id]"
+                              cachedDataType="i2"
+                              cachedName="cust_rel_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_rel_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_rel_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_add_id]"
+                              cachedDataType="i4"
+                              cachedName="cust_add_id"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_id]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_id]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_add_lat]"
+                              cachedDataType="numeric"
+                              cachedName="cust_add_lat"
+                              cachedPrecision="16"
+                              cachedScale="12"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_lat]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_lat]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_add_lon]"
+                              cachedDataType="numeric"
+                              cachedName="cust_add_lon"
+                              cachedPrecision="16"
+                              cachedScale="12"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_lon]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_lon]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cust_add_type]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="1"
+                              cachedName="cust_add_type"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cust_add_type]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_type]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[as_of_date]"
+                              cachedDataType="dbDate"
+                              cachedName="as_of_date"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[as_of_date]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[as_of_date]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[acct_id3]"
+                              cachedDataType="i4"
+                              cachedName="acct_id3"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[acct_id3]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id3]}</property>
+                              </properties>
+                            </inputColumn>
+                            <inputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1].Columns[cur_bal]"
+                              cachedDataType="numeric"
+                              cachedName="cur_bal"
+                              cachedPrecision="20"
+                              cachedScale="4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output].Columns[cur_bal]">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Output column lineage ID"
+                                  name="OutputColumnLineageID">#{Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cur_bal]}</property>
+                              </properties>
+                            </inputColumn>
+                          </inputColumns>
+                          <externalMetadataColumns />
+                        </input>
+                        <input
+                          refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 2]"
+                          dangling="true"
+                          hasSideEffects="true"
+                          name="Union All Input 2">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1]"
+                          name="Union All Output 1">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id]"
+                              name="acct_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_id]"
+                              name="cust_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_cust_role_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_cust_role_id]"
+                              name="acct_cust_role_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id2]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id2]"
+                              name="acct_id2" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[prod_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[prod_id]"
+                              name="prod_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[open_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[open_date]"
+                              name="open_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[close_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[close_date]"
+                              name="close_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[open_close_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[open_close_code]"
+                              name="open_close_code" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[branch_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[branch_id]"
+                              name="branch_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_rel_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_rel_id]"
+                              name="acct_rel_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[pri_cust_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[pri_cust_id]"
+                              name="pri_cust_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[loan_amt]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[loan_amt]"
+                              name="loan_amt"
+                              precision="20"
+                              scale="4" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_id]"
+                              name="acct_branch_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_code]"
+                              name="acct_branch_code" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_desc]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_desc]"
+                              name="acct_branch_desc" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_region_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_region_id]"
+                              name="acct_region_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_area_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_area_id]"
+                              name="acct_area_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_lat]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_lat]"
+                              name="acct_branch_lat"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_lon]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_lon]"
+                              name="acct_branch_lon"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_id]"
+                              name="acct_branch_add_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_lat]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_lat]"
+                              name="acct_branch_add_lat"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_lon]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_lon]"
+                              name="acct_branch_add_lon"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_branch_add_type]"
+                              name="acct_branch_add_type" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_id2]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_id2]"
+                              name="cust_id2" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[last_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[last_name]"
+                              name="last_name" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[first_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[first_name]"
+                              name="first_name" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[gender]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[gender]"
+                              name="gender" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[birth_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[birth_date]"
+                              name="birth_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_since_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_since_date]"
+                              name="cust_since_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[pri_branch_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[pri_branch_id]"
+                              name="pri_branch_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_pri_branch_dist]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_pri_branch_dist]"
+                              name="cust_pri_branch_dist"
+                              precision="7"
+                              scale="2" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_lat]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_lat]"
+                              name="cust_lat"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_lon]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_lon]"
+                              name="cust_lon"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_rel_id]"
+                              dataType="i2"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_rel_id]"
+                              name="cust_rel_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_id]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_id]"
+                              name="cust_add_id" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_lat]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_lat]"
+                              name="cust_add_lat"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_lon]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_lon]"
+                              name="cust_add_lon"
+                              precision="16"
+                              scale="12" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="1"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cust_add_type]"
+                              name="cust_add_type" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[as_of_date]"
+                              dataType="dbDate"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[as_of_date]"
+                              name="as_of_date" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id3]"
+                              dataType="i4"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[acct_id3]"
+                              name="acct_id3" />
+                            <outputColumn
+                              refId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cur_bal]"
+                              dataType="numeric"
+                              lineageId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Outputs[Union All Output 1].Columns[cur_bal]"
+                              name="cur_bal"
+                              precision="20"
+                              scale="4" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\Parent Container\Test Connection Menagers\DFNB3.Paths[OLE DB Source Output]"
+                      endId="Package\Parent Container\Test Connection Menagers\DFNB3\Union All.Inputs[Union All Input 1]"
+                      name="OLE DB Source Output"
+                      startId="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3.Outputs[OLE DB Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
             <DTS:Executable
               DTS:refId="Package\Parent Container\Test Connection Menagers\EXM"
               DTS:CreationName="Microsoft.Pipeline"
@@ -2957,6 +4790,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:refId="Package\Parent Container\Test Log Variable Value Changed"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Sequence Container"
+          DTS:Disabled="True"
           DTS:DTSID="{9FAAEF9E-3FD5-4537-8230-AC3E3452753C}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
@@ -2972,7 +4806,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               DTS:LocaleID="-1"
               DTS:ObjectName="Initial Date Time"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -2994,7 +4828,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               DTS:LocaleID="-1"
               DTS:ObjectName="Updated Date Time"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3478,6 +5312,115 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
+                Name="ScriptMain.vb"
+                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
+'The Script Task allows you to perform virtually any operation that can be accomplished in
+'a .Net application within the context of an Integration Services control flow. 
+
+'Expand the other regions which have "Help" prefixes for examples of specific ways to use
+'Integration Services features within this script task.
+#End Region
+
+
+#Region "Imports"
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Runtime
+#End Region
+
+'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+'or parent of this class.
+<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
+<System.CLSCompliantAttribute(False)> _
+Partial Public Class ScriptMain
+    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+
+#Region "Help:  Using Integration Services variables and parameters in a script"
+    'To use a variable in this script, first ensure that the variable has been added to 
+    'either the list contained in the ReadOnlyVariables property or the list contained in 
+    'the ReadWriteVariables property of this script task, according to whether or not your
+    'code needs to write to the variable.  To add the variable, save this script, close this instance of
+    'Visual Studio, and update the ReadOnlyVariables and 
+    'ReadWriteVariables properties in the Script Transformation Editor window.
+    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
+
+    'Example of reading from a variable:
+    ' startTime = Dts.Variables("System::StartTime").Value
+
+    'Example of writing to a variable:
+    ' Dts.Variables("User::myStringVariable").Value = "new value"
+
+    'Example of reading from a package parameter:
+    ' batchId = Dts.Variables("$Package::batchId").Value
+
+    'Example of reading from a project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").Value
+
+    'Example of reading from a sensitive project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
+#End Region
+
+#Region "Help:  Firing Integration Services events from a script"
+    'This script task can fire events for logging purposes.
+
+    'Example of firing an error event:
+    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
+
+    'Example of firing an information event:
+    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
+
+    'Example of firing a warning event:
+    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
+#End Region
+
+#Region "Help:  Using Integration Services connection managers in a script"
+    'Some types of connection managers can be used in this script task.  See the topic 
+    '"Working with Connection Managers Programatically" for details.
+
+    'Example of using an ADO.Net connection manager:
+    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
+    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
+
+    'Example of using a File connection manager
+    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
+    ' Dim filePath As String = CType(rawConnection, String)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
+#End Region
+
+    'This method is called when this script task executes in the control flow.
+    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+    'To open Help, press F1.
+
+    Public Sub Main()
+        Try
+            Dim sVarValue As String = Dts.Variables("VariableValue").Value.ToString
+            Dts.Variables("strVariableValue").Value = sVarValue
+        Catch ex As Exception
+            Dts.Variables("strVariableValue").Value = "Unable to Convert to String: " _
+ & ex.Message
+        End Try
+
+        Dts.TaskResult = ScriptResults.Success
+    End Sub
+
+#Region "ScriptResults declaration"
+    'This enum provides a convenient shorthand within the scope of this class for setting the
+    'result of the script.
+
+    'This code was generated automatically.
+    Enum ScriptResults
+        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
+        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+    End Enum
+
+#End Region
+
+End Class]]></ProjectItem>
+              <ProjectItem
                 Name="ST_41a5b1057a124a7aa4ccf5f454a13b1c.vbproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -3647,115 +5590,6 @@ End Class]]></ProjectItem>
     <msb:File Include="My Project\Settings.Designer.vb" />
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
-              <ProjectItem
-                Name="ScriptMain.vb"
-                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
-'The Script Task allows you to perform virtually any operation that can be accomplished in
-'a .Net application within the context of an Integration Services control flow. 
-
-'Expand the other regions which have "Help" prefixes for examples of specific ways to use
-'Integration Services features within this script task.
-#End Region
-
-
-#Region "Imports"
-Imports System
-Imports System.Data
-Imports System.Math
-Imports Microsoft.SqlServer.Dts.Runtime
-#End Region
-
-'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
-'or parent of this class.
-<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
-<System.CLSCompliantAttribute(False)> _
-Partial Public Class ScriptMain
-    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
-
-#Region "Help:  Using Integration Services variables and parameters in a script"
-    'To use a variable in this script, first ensure that the variable has been added to 
-    'either the list contained in the ReadOnlyVariables property or the list contained in 
-    'the ReadWriteVariables property of this script task, according to whether or not your
-    'code needs to write to the variable.  To add the variable, save this script, close this instance of
-    'Visual Studio, and update the ReadOnlyVariables and 
-    'ReadWriteVariables properties in the Script Transformation Editor window.
-    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
-
-    'Example of reading from a variable:
-    ' startTime = Dts.Variables("System::StartTime").Value
-
-    'Example of writing to a variable:
-    ' Dts.Variables("User::myStringVariable").Value = "new value"
-
-    'Example of reading from a package parameter:
-    ' batchId = Dts.Variables("$Package::batchId").Value
-
-    'Example of reading from a project parameter:
-    ' batchId = Dts.Variables("$Project::batchId").Value
-
-    'Example of reading from a sensitive project parameter:
-    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
-#End Region
-
-#Region "Help:  Firing Integration Services events from a script"
-    'This script task can fire events for logging purposes.
-
-    'Example of firing an error event:
-    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
-
-    'Example of firing an information event:
-    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
-
-    'Example of firing a warning event:
-    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
-#End Region
-
-#Region "Help:  Using Integration Services connection managers in a script"
-    'Some types of connection managers can be used in this script task.  See the topic 
-    '"Working with Connection Managers Programatically" for details.
-
-    'Example of using an ADO.Net connection manager:
-    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
-    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
-    ' <Use the connection in some code here, then release the connection>
-    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
-
-    'Example of using a File connection manager
-    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
-    ' Dim filePath As String = CType(rawConnection, String)
-    ' <Use the connection in some code here, then release the connection>
-    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
-#End Region
-
-    'This method is called when this script task executes in the control flow.
-    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
-    'To open Help, press F1.
-
-    Public Sub Main()
-        Try
-            Dim sVarValue As String = Dts.Variables("VariableValue").Value.ToString
-            Dts.Variables("strVariableValue").Value = sVarValue
-        Catch ex As Exception
-            Dts.Variables("strVariableValue").Value = "Unable to Convert to String: " _
- & ex.Message
-        End Try
-
-        Dts.TaskResult = ScriptResults.Success
-    End Sub
-
-#Region "ScriptResults declaration"
-    'This enum provides a convenient shorthand within the scope of this class for setting the
-    'result of the script.
-
-    'This code was generated automatically.
-    Enum ScriptResults
-        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
-        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
-    End Enum
-
-#End Region
-
-End Class]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -4165,32 +5999,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\SQL LogPackageStart"
-          TopLeft="313.9,5.49999999999995" />
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\SQL LogPackageEnd"
-          TopLeft="315.5,519.1" />
-        <NodeLayout
           Size="184.8,41.6"
           Id="Package\Parent Container\MsgBox check variable"
           TopLeft="5.49999999999997,108.3" />
         <NodeLayout
           Size="100.8,41.6"
           Id="Package\Parent Container\Test Connection Menagers\EXM"
-          TopLeft="5.50000000000001,5.49999999999995" />
+          TopLeft="5.49999999999998,5.49999999999995" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Parent Container\Test Connection Menagers\SSIS_PDS"
           TopLeft="167.1,5.49999999999995" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Parent Container\Test Connection Menagers\DFNB3"
+          TopLeft="357.5,5.49999999999995" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="302.4,102.4"
-          Size="302.4,145.6"
+          PanelSize="476,102.4"
+          Size="476,145.6"
           Id="Package\Parent Container\Test Connection Menagers"
-          TopLeft="250.7,56.2999999999999" />
+          TopLeft="250.9,56.2999999999999" />
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\Parent Container\Test Log Variable Value Changed\Initial Date Time"
@@ -4227,17 +6057,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="179.2,204"
           Size="179.2,247.2"
           Id="Package\Parent Container\Test Log Variable Value Changed"
-          TopLeft="613.3,5.49999999999991" />
+          TopLeft="787.3,5.49999999999991" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="798.4,308"
-          Size="798.4,351.2"
+          PanelSize="972,308"
+          Size="972,351.2"
           Id="Package\Parent Container"
-          TopLeft="5.50000000000006,107.1" />
+          TopLeft="5.5,107.1" />
+        <AnnotationLayout
+          Text="/*****************************************************************************************************************&#xA;NAME:    Framework&#xA;PURPOSE: To be used in clas projects&#xA;MODIFICATION LOG:&#xA;Ver      Date        Author        Description&#xA;-----   ----------   -----------   -------------------------------------------------------------------------------&#xA;1.0     3/19/2021  LLUCAS2020      1. Framework IT243&#xA;RUNTIME: &#xA;Approx. 1 min&#xA;NOTES: This is going to be saved on my repository, so I can easily find it when I need to use the header again.&#xA;These are the varioius Extract, Transform, and Load steps needed for the Example Data&#xA;LICENSE: This code is covered by the GNU General Public License which guarantees end users&#xA;the freedom to run, study, share, and modify the code. This license grants the recipients&#xA;of the code the rights of the Free Software Definition. All derivative work can only be&#xA;distributed under the same license terms.&#xA; &#xA;******************************************************************************************************************/"
+          ParentId="Package\Sequence Container"
+          FontInfo="{assembly:Null}"
+          Size="607.2,NaN"
+          Id="6abdc2de-eea1-4c2a-a6dd-9c713a1aed34"
+          TopLeft="90.2999921520554,17.2666709301208" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="703.2,367.2"
+          Size="196.8,43.2"
+          Id="Package\Sequence Container"
+          TopLeft="145.1,518.3" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\SQL LogPackageEnd"
+          TopLeft="402.3,519.1" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\SQL LogPackageStart"
+          TopLeft="400.7,5.49999999999995" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="404.7,47.1">
+          TopLeft="491.5,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4259,7 +6111,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="404.7,458.3">
+          TopLeft="491.5,458.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4279,20 +6131,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="/*****************************************************************************************************************&#xD;&#xA;NAME:    Framework&#xD;&#xA;PURPOSE: To be used in clas projects&#xD;&#xA;MODIFICATION LOG:&#xD;&#xA;Ver      Date        Author        Description&#xD;&#xA;-----   ----------   -----------   -------------------------------------------------------------------------------&#xD;&#xA;1.0     3/19/2021  LLUCAS2020      1. Framework IT243&#xD;&#xA;RUNTIME: &#xD;&#xA;Approx. 1 min&#xD;&#xA;NOTES: This is going to be saved on my repository, so I can easily find it when I need to use the header again.&#xD;&#xA;These are the varioius Extract, Transform, and Load steps needed for the Example Data&#xD;&#xA;LICENSE: This code is covered by the GNU General Public License which guarantees end users&#xD;&#xA;the freedom to run, study, share, and modify the code. This license grants the recipients&#xD;&#xA;of the code the rights of the Free Software Definition. All derivative work can only be&#xD;&#xA;distributed under the same license terms.&#xD;&#xA; &#xD;&#xA;******************************************************************************************************************/"
-          ParentId="Package\Sequence Container"
-          FontInfo="{assembly:Null}"
-          Size="607.2,295.2"
-          Id="6abdc2de-eea1-4c2a-a6dd-9c713a1aed34"
-          TopLeft="90.2999921520554,17.2666709301208" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="703.2,367.2"
-          Size="196.8,43.2"
-          Id="Package\Sequence Container"
-          TopLeft="554.3,518.3" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4304,18 +6142,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="183.2,41.6"
           Id="Package.EventHandlers[OnError]\SQL LogPackageError"
-          TopLeft="5.5,5.49999999999995" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <DtsEventHandler
-    design-time-name="Package.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="196,41.6"
-          Id="Package.EventHandlers[OnPreExecute]\SQL LogTaskPreExecute"
           TopLeft="5.5,5.49999999999995" />
       </GraphLayout>
     </LayoutInfo>
@@ -4333,10 +6159,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     </LayoutInfo>
   </DtsEventHandler>
   <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="196,41.6"
+          Id="Package.EventHandlers[OnPreExecute]\SQL LogTaskPreExecute"
+          TopLeft="5.5,5.49999999999995" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
     design-time-name="Package.EventHandlers[OnVariableValueChanged]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="207.2,41.6"
           Id="Package.EventHandlers[OnVariableValueChanged]\SCR Convert value to string"
@@ -4364,7 +6202,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4374,15 +6214,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Parent Container\Test Connection Menagers\EXM">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="100.8,41.6"
-          Id="Package\Parent Container\Test Connection Menagers\EXM\EXM"
-          TopLeft="15.1,5.49999999999995" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="120,41.6"
           Id="Package\Parent Container\Test Connection Menagers\EXM\Union All"
           TopLeft="5.50000000000001,107.1" />
+        <NodeLayout
+          Size="100.8,41.6"
+          Id="Package\Parent Container\Test Connection Menagers\EXM\EXM"
+          TopLeft="15.1,5.49999999999995" />
         <EdgeLayout
           Id="Package\Parent Container\Test Connection Menagers\EXM.Paths[OLE DB Source Output]"
           TopLeft="65.5,47.1">
@@ -4402,17 +6242,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Parent Container\Test Connection Menagers\EXM\EXM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Parent Container\Test Connection Menagers\SSIS_PDS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Parent Container\Test Connection Menagers\SSIS_PDS\SSIS_PDS"
@@ -4440,14 +6295,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Parent Container\Test Connection Menagers\EXM\EXM">
+    design-time-name="Package\Parent Container\Test Connection Menagers\SSIS_PDS\SSIS_PDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4459,8 +6316,46 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Parent Container\Test Connection Menagers\DFNB3">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3"
+          TopLeft="9.10000000000002,5.49999999999995" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Parent Container\Test Connection Menagers\DFNB3\Union All"
+          TopLeft="5.50000000000001,107.1" />
+        <EdgeLayout
+          Id="Package\Parent Container\Test Connection Menagers\DFNB3.Paths[OLE DB Source Output]"
+          TopLeft="65.5,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Parent Container\Test Connection Menagers\SSIS_PDS\SSIS_PDS">
+    design-time-name="Package\Parent Container\Test Connection Menagers\DFNB3\DFNB3">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
