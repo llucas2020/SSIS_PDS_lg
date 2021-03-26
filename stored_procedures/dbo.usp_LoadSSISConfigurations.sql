@@ -25,7 +25,7 @@ Ver      Date        Author           Description
 -------  ----------  ---------------  ------------------------------------------------------------------------
 1.0      3/19/2021  llucas2020       1. Created this process for LDS BC IT243
 2.0      3/19/2021  llucas2020       2. Added enhancements for DFNB3
-
+3.0      3/25/2021  llucas2020       3. Added LoadDFNB3_lg configuration
 
 RUNTIME: 
 approx 5 sec
@@ -149,7 +149,7 @@ SELECT c.*
      WHERE ConfigurationFilter = 'LoadDFNB3_lg';
 	
 
-	-- 3.1.1) v_data_share_root
+	-- 3.2.1) v_data_share_root
 
     INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
                                         , ConfiguredValue

@@ -31,7 +31,7 @@ SELECT p.PackageID
        INNER JOIN
        dbo.PackageTaskLog AS ptl ON ptl.PackageLogID = pl.PackageLogID
  WHERE 1 = 1
-       AND BatchLogID = 7
+       AND BatchLogID = 17
 	   --AND PackageName = 'SSIS_PDS_Template_jj'
  --ORDER BY CONVERT(TIME, ptl.EndDateTime - ptl.StartDateTime) DESC;
  ORDER BY ptl.EndDateTime;
