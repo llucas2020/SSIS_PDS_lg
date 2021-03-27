@@ -26,6 +26,7 @@ Ver      Date        Author           Description
 1.0      3/19/2021  llucas2020       1. Created this process for LDS BC IT243
 2.0      3/19/2021  llucas2020       2. Added enhancements for DFNB3
 3.0      3/25/2021  llucas2020       3. Added LoadDFNB3_lg configuration
+4.0      3/26/2021  llucas2020       3. Added LoadEXM_lg configuration
 
 RUNTIME: 
 approx 5 sec
@@ -163,6 +164,25 @@ SELECT c.*
          , 'String'
           );
 
+		  -- 3.3) LoadEXM_lg
+
+    DELETE FROM dbo.[SSIS Configurations]
+     WHERE ConfigurationFilter = 'LoadEXM_lg';
+	
+
+	-- 3.3.1) v_data_share_root
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'LoadEXM_lg'
+		 , 'C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\EXM_lg\txt_files'
+         , '\Package.Variables[User::v_data_share_root].Properties[Value]'
+         , 'String'
+          );
 
 END;
 
