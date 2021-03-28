@@ -27,6 +27,7 @@ Ver      Date        Author           Description
 2.0      3/19/2021  llucas2020       2. Added enhancements for DFNB3
 3.0      3/25/2021  llucas2020       3. Added LoadDFNB3_lg configuration
 4.0      3/26/2021  llucas2020       3. Added LoadEXM_lg configuration
+5.0      3/27/2021  llucas2020       3. Added LoadNAICSCodeHierDim_lg configuration
 
 RUNTIME: 
 approx 5 sec
@@ -183,6 +184,29 @@ SELECT c.*
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
+
+		  -- 3.4) LoadNAICSCodeHierDim_lg
+
+    DELETE FROM dbo.[SSIS Configurations]
+     WHERE ConfigurationFilter = 'LoadNAICSCodeHierDim_lg';
+	
+
+	-- 3.4.1) v_data_share_root
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'LoadNAICSCodeHierDim_lg'
+		 , 'C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_dw\xls_files\'
+         , '\Package.Variables[User::v_data_share_root].Properties[Value]'
+         , 'String'
+          );
+
+		  
+
 
 END;
 
