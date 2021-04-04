@@ -12,11 +12,135 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LoadEXM_lg"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{BE7DDF7D-11C6-4B8F-958B-6DC3468BA377}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{9901DCAB-696D-48BC-851D-B801A168CFC8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(local).EXM]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{662B6D26-3316-4FD7-8F40-1EF93729E61B}"
+      DTS:ObjectName="(local).EXM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=EXM;Integrated Security=True;Application Name=SSIS-LoadEXM_lg-{662B6D26-3316-4FD7-8F40-1EF93729E61B}(local).EXM1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Data]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{99DB5AB6-8206-484A-982F-EE481B30B18F}"
+      DTS:ObjectName="Data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\EXM_lg\txt_files\DATA.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pl_id"
+              DTS:DTSID="{E7B3AA74-4C64-4965-98FE-248554405A66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="l_name"
+              DTS:DTSID="{8AE45CC6-53FC-4438-B438-A60B684536A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="f_name"
+              DTS:DTSID="{8D52A15A-92E5-4774-8EF1-881E77393D36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pl_name"
+              DTS:DTSID="{49E63A1A-1819-4E7D-85D9-C6CDB909F76C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="t_id"
+              DTS:DTSID="{4C121917-4E73-4DF1-B75F-256C494D31B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="p_id"
+              DTS:DTSID="{7F5AF83A-7E65-4756-B04D-5CAFBCF0B43A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pl_num"
+              DTS:DTSID="{DF992075-E651-482F-AA3D-1B11434122C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="p_code"
+              DTS:DTSID="{13608E6C-24F9-451D-A57D-0331A1C07775}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="p_name"
+              DTS:DTSID="{B5661062-3371-4A79-87A4-1FF66515835E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="p_target"
+              DTS:DTSID="{73C8F42D-1B91-4821-814B-FC2CC1FEFC57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="t_code"
+              DTS:DTSID="{BB6192DD-7C33-4904-8A35-22F83A1839AF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DFNB3]"
       DTS:CreationName="OLEDB"
@@ -39,6 +163,16 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EXM.dbo.tblData_profile.xml]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{3F810993-E6FA-4729-929D-384041FD03B1}"
+      DTS:ObjectName="EXM.dbo.tblData_profile.xml">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\EXM_lg\xml_files\EXM.dbo.tblData_profile.xml" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -171,7 +305,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="MsgBox check variable"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -319,6 +453,75 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
           <ProjectItem
+            Name="My Project\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="My Project\Settings.Designer.vb"
+            Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_150e3b2feced4e6bb6af44d92c3de82b</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_150e3b2feced4e6bb6af44d92c3de82b</msb:DisplayName>
+    <msb:ProjectId>{9948A544-3D9F-4D57-BE19-388F53DA27BD}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_150e3b2feced4e6bb6af44d92c3de82b.vbproj" />
+    <msb:File Include="My Project\Settings.Designer.vb" />
+    <msb:File Include="My Project\AssemblyInfo.vb" />
+    <msb:File Include="ScriptMain.vb" />
+    <msb:File Include="My Project\Resources.resx" />
+    <msb:File Include="My Project\Resources.Designer.vb" />
+    <msb:File Include="My Project\Settings.settings" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
             Name="ScriptMain.vb"
             Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
 'The Script Task allows you to perform virtually any operation that can be accomplished in
@@ -435,75 +638,6 @@ Partial Public Class ScriptMain
     End Sub
 
 End Class]]></ProjectItem>
-          <ProjectItem
-            Name="My Project\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
-          <ProjectItem
-            Name="My Project\Settings.Designer.vb"
-            Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
-' <autogenerated>
-'     This code was generated by a tool.
-'
-'     Changes to this file may cause incorrect behavior and will be lost if
-'     the code is regenerated.
-' </autogenerated>
-'------------------------------------------------------------------------------
-
-Option Strict Off
-Option Explicit On
-
-
-
-Partial Friend NotInheritable Class MySettings
-    Inherits System.Configuration.ApplicationSettingsBase
-
-    Private Shared m_Value As MySettings
-
-    Private Shared m_SyncObject As Object = New Object
-
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Public Shared ReadOnly Property Value() As MySettings
-        Get
-            If (MySettings.m_Value Is Nothing) Then
-                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
-                If (MySettings.m_Value Is Nothing) Then
-                    Try
-                        MySettings.m_Value = New MySettings
-                    Finally
-                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
-                    End Try
-                End If
-            End If
-            Return MySettings.m_Value
-        End Get
-    End Property
-End Class]]></ProjectItem>
-          <ProjectItem
-            Name="Project"
-            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-  <msb:PropertyGroup>
-    <msb:CodeName>ST_150e3b2feced4e6bb6af44d92c3de82b</msb:CodeName>
-    <msb:Language>msBuild</msb:Language>
-    <msb:DisplayName>ST_150e3b2feced4e6bb6af44d92c3de82b</msb:DisplayName>
-    <msb:ProjectId>{9948A544-3D9F-4D57-BE19-388F53DA27BD}</msb:ProjectId>
-  </msb:PropertyGroup>
-  <msb:ItemGroup>
-    <msb:Project Include="ST_150e3b2feced4e6bb6af44d92c3de82b.vbproj" />
-    <msb:File Include="My Project\Settings.Designer.vb" />
-    <msb:File Include="My Project\AssemblyInfo.vb" />
-    <msb:File Include="ScriptMain.vb" />
-    <msb:File Include="My Project\Resources.resx" />
-    <msb:File Include="My Project\Resources.Designer.vb" />
-    <msb:File Include="My Project\Settings.settings" />
-  </msb:ItemGroup>
-</c:Project>]]></ProjectItem>
           <ProjectItem
             Name="My Project\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -863,15 +997,710 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
+          DTS:refId="Package\Parent Container\Data Profiling Task"
+          DTS:CreationName="Microsoft.DataProfilingTask"
+          DTS:Description="Data Profiling Task"
+          DTS:DTSID="{37C353B3-E65F-42B8-9276-8382AA1B67C3}"
+          DTS:ExecutableType="Microsoft.DataProfilingTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Profiling Task"
+          DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <DataProfilingTaskData
+              Destination="EXM.dbo.tblData_profile.xml"
+              OverwriteDestination="True">
+              <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources />
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{662B6D26-3316-4FD7-8F40-1EF93729E61B}</DataSourceID>
+        <Table Schema="dbo" Table="tblData" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{662B6D26-3316-4FD7-8F40-1EF93729E61B}</DataSourceID>
+        <Table Schema="dbo" Table="tblData" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{662B6D26-3316-4FD7-8F40-1EF93729E61B}</DataSourceID>
+        <Table Schema="dbo" Table="tblData" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{662B6D26-3316-4FD7-8F40-1EF93729E61B}</DataSourceID>
+        <Table Schema="dbo" Table="tblData" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{662B6D26-3316-4FD7-8F40-1EF93729E61B}</DataSourceID>
+        <Table Schema="dbo" Table="tblData" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{662B6D26-3316-4FD7-8F40-1EF93729E61B}</DataSourceID>
+        <Table Schema="dbo" Table="tblData" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles />
+  </DataProfileOutput>
+</DataProfile>]]></ProfileInput>
+            </DataProfilingTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Parent Container\Load Data"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{75F1F377-A46D-41AB-939C-146E8012F334}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Data"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Parent Container\Load Data\DATA_txt"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="DATA_txt"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Parent Container\Load Data\DATA_txt.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Data]"
+                      connectionManagerRefId="Package.ConnectionManagers[Data]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_id]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[pl_id]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_id]"
+                          name="pl_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[l_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[l_name]"
+                          length="50"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[l_name]"
+                          name="l_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[f_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[f_name]"
+                          length="50"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[f_name]"
+                          name="f_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[pl_name]"
+                          length="100"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_name]"
+                          name="pl_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[t_id]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[t_id]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[t_id]"
+                          name="t_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_id]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[p_id]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_id]"
+                          name="p_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_num]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[pl_num]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_num]"
+                          name="pl_num"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[p_code]"
+                          length="5"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_code]"
+                          name="p_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[p_name]"
+                          length="50"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_name]"
+                          name="p_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_target]"
+                          dataType="ui4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[p_target]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_target]"
+                          name="p_target"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[t_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[t_code]"
+                          length="5"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[t_code]"
+                          name="t_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[pl_id]"
+                          dataType="ui4"
+                          name="pl_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[l_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="l_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[f_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="f_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[pl_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="pl_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[t_id]"
+                          dataType="ui4"
+                          name="t_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[p_id]"
+                          dataType="ui4"
+                          name="p_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[pl_num]"
+                          dataType="ui4"
+                          name="pl_num" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[p_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="p_code" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[p_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="p_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[p_target]"
+                          dataType="ui4"
+                          name="p_target" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].ExternalColumns[t_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="t_code" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Parent Container\Load Data\dbo_tblData"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="dbo_tblData"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[tblData]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Parent Container\Load Data\dbo_tblData.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[EXM]"
+                      connectionManagerRefId="Package.ConnectionManagers[EXM]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[pl_id]"
+                          cachedDataType="ui4"
+                          cachedName="pl_id"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[pl_id]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_id]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[l_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="l_name"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[l_name]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[l_name]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[f_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="f_name"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[f_name]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[f_name]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[pl_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="pl_name"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[pl_name]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_name]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[t_id]"
+                          cachedDataType="ui4"
+                          cachedName="t_id"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[t_id]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[t_id]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[p_id]"
+                          cachedDataType="ui4"
+                          cachedName="p_id"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[p_id]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_id]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[pl_num]"
+                          cachedDataType="ui4"
+                          cachedName="pl_num"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[pl_num]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[pl_num]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[p_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="p_code"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[p_code]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_code]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[p_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="p_name"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[p_name]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_name]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[p_target]"
+                          cachedDataType="ui4"
+                          cachedName="p_target"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[p_target]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[p_target]" />
+                        <inputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].Columns[t_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="t_code"
+                          externalMetadataColumnId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[t_code]"
+                          lineageId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output].Columns[t_code]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[pl_id]"
+                          dataType="i4"
+                          name="pl_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[l_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="l_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[f_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="f_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[pl_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="pl_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[t_id]"
+                          dataType="i4"
+                          name="t_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[p_id]"
+                          dataType="i4"
+                          name="p_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[pl_num]"
+                          dataType="i4"
+                          name="pl_num" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[p_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="p_code" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[p_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="p_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[p_target]"
+                          dataType="i4"
+                          name="p_target" />
+                        <externalMetadataColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input].ExternalColumns[t_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="t_code" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Parent Container\Load Data\dbo_tblData.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Parent Container\Load Data\dbo_tblData.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Parent Container\Load Data\dbo_tblData.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Parent Container\Load Data\dbo_tblData.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Parent Container\Load Data.Paths[Flat File Source Output]"
+                  endId="Package\Parent Container\Load Data\dbo_tblData.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Parent Container\Load Data\DATA_txt.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Parent Container\Load Nums"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
+          DTS:Disabled="True"
           DTS:DTSID="{293BC6A4-BA81-48D6-A4D8-63CD060F51EB}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Load Nums"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -879,7 +1708,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               SQLTask:SqlStatementSource="EXEC dbo.usp_Load_Nums 12345;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Parent Container\Truncate Data"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{734617BB-78AF-4064-9D54-81FFAEB9B72B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Data"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{9E9C311D-89AC-4AA0-B591-FAACCE57FFEC}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.tblData;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
       </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Parent Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{358CD7C3-661A-4A49-AD36-B8EC9CDBA9FB}"
+          DTS:From="Package\Parent Container\Truncate Data"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Parent Container\Load Data" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Sequence Container"
@@ -902,7 +1758,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL LogPackageEnd"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -938,7 +1794,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL LogPackageStart"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2023,47 +2879,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\MsgBox check variable"
-          TopLeft="5.50000000000003,313.5" />
+          TopLeft="5.50000000000003,415.1" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Parent Container\Data Profiling Task"
+          TopLeft="383.9,107.1" />
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\Parent Container\Load Data"
+          TopLeft="196.9,107.1" />
         <NodeLayout
           Size="131.2,41.6"
           Id="Package\Parent Container\Load Nums"
-          TopLeft="5.5,5.49999999999995" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="150.4,102.4"
-          Size="142.4,145.6"
-          Id="Package\Parent Container"
-          TopLeft="525.7,107.1" />
-        <AnnotationLayout
-          Text="/*****************************************************************************************************************&#xA;NAME:    Framework&#xA;PURPOSE: To be used in clas projects&#xA;MODIFICATION LOG:&#xA;Ver      Date        Author        Description&#xA;-----   ----------   -----------   -------------------------------------------------------------------------------&#xA;1.0     3/19/2021  LLUCAS2020      1. Framework IT243&#xA;RUNTIME: &#xA;Approx. 1 min&#xA;NOTES: This is going to be saved on my repository, so I can easily find it when I need to use the header again.&#xA;These are the varioius Extract, Transform, and Load steps needed for the Example Data&#xA;LICENSE: This code is covered by the GNU General Public License which guarantees end users&#xA;the freedom to run, study, share, and modify the code. This license grants the recipients&#xA;of the code the rights of the Free Software Definition. All derivative work can only be&#xA;distributed under the same license terms.&#xA; &#xA;******************************************************************************************************************/"
-          ParentId="Package\Sequence Container"
-          FontInfo="{assembly:Null}"
-          Size="607.2,NaN"
-          Id="6abdc2de-eea1-4c2a-a6dd-9c713a1aed34"
-          TopLeft="90.2999921520554,17.2666709301208" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="703.2,367.2"
-          Size="196.8,43.2"
-          Id="Package\Sequence Container"
-          TopLeft="250.5,312.7" />
+          TopLeft="5.50000000000003,107.1" />
         <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\SQL LogPackageEnd"
-          TopLeft="507.7,313.5" />
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\SQL LogPackageStart"
-          TopLeft="506.1,5.49999999999984" />
+          Size="144,41.6"
+          Id="Package\Parent Container\Truncate Data"
+          TopLeft="188.1,5.49999999999984" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="596.9,47.0999999999998">
+          Id="Package\Parent Container.PrecedenceConstraints[Constraint]"
+          TopLeft="260.1,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2083,9 +2922,60 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="556,204"
+          Size="556,247.2"
+          Id="Package\Parent Container"
+          TopLeft="318.9,107.1" />
+        <AnnotationLayout
+          Text="/*****************************************************************************************************************&#xA;NAME:    Framework&#xA;PURPOSE: To be used in clas projects&#xA;MODIFICATION LOG:&#xA;Ver      Date        Author        Description&#xA;-----   ----------   -----------   -------------------------------------------------------------------------------&#xA;1.0     3/19/2021  LLUCAS2020      1. Framework IT243&#xA;RUNTIME: &#xA;Approx. 1 min&#xA;NOTES: This is going to be saved on my repository, so I can easily find it when I need to use the header again.&#xA;These are the varioius Extract, Transform, and Load steps needed for the Example Data&#xA;LICENSE: This code is covered by the GNU General Public License which guarantees end users&#xA;the freedom to run, study, share, and modify the code. This license grants the recipients&#xA;of the code the rights of the Free Software Definition. All derivative work can only be&#xA;distributed under the same license terms.&#xA; &#xA;******************************************************************************************************************/"
+          ParentId="Package\Sequence Container"
+          FontInfo="{assembly:Null}"
+          Size="607.2,NaN"
+          Id="6abdc2de-eea1-4c2a-a6dd-9c713a1aed34"
+          TopLeft="90.2999921520554,17.2666709301208" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="703.2,367.2"
+          Size="196.8,43.2"
+          Id="Package\Sequence Container"
+          TopLeft="250.5,414.3" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\SQL LogPackageEnd"
+          TopLeft="507.7,415.1" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\SQL LogPackageStart"
+          TopLeft="506.1,5.49999999999984" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="596.9,47.0999999999998">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="596.9,252.7">
+          TopLeft="596.9,354.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2184,5 +3074,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Parent Container\Load Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Parent Container\Load Data\dbo_tblData"
+          TopLeft="5.50000000000001,107.1" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\Parent Container\Load Data\DATA_txt"
+          TopLeft="11.1,5.49999999999995" />
+        <EdgeLayout
+          Id="Package\Parent Container\Load Data.Paths[Flat File Source Output]"
+          TopLeft="72.7,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Parent Container\Load Data\dbo_tblData">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
