@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LoadDFNB3_lg"
   DTS:PackageType="5"
-  DTS:VersionBuild="140"
-  DTS:VersionGUID="{0CC397BE-9AB3-44AE-AB58-17B0A25EE81D}">
+  DTS:VersionBuild="168"
+  DTS:VersionGUID="{FB4742CB-AA16-4C62-A058-24F7D769A1B0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,105 +30,106 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[BRANCH_TRAN_YYYY.txt]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{A681601F-0AE1-4E49-8BF1-AAA2A140046B}"
+      DTS:DTSID="{2F94A7F6-30CC-4B49-BC13-8D2A550A74E7}"
       DTS:ObjectName="BRANCH_TRAN_YYYY.txt">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[User::v_data_share_root] +"BRANCH_TRAN_" + @[User::v_tran_year] +  ".txt"</DTS:PropertyExpression>
+        DTS:Name="ConnectionString">@[User::v_data_share_root] +"BRANCH_TRAN_" + @[User::v_tran_year]  + ".txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
           DTS:LocaleID="1033"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
-          DTS:TextQualifier="_x0027_"
+          DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\BRANCH_TRAN_.txt">
+          DTS:ConnectionString="C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\txt_files\BRANCH_TRAN_.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="branch_id"
-              DTS:DTSID="{0176A253-27DF-4FD7-AED4-156B1A83C6B3}"
+              DTS:DTSID="{31709DE1-8D7A-4BE5-A3AB-8EE26DFAA7A6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="acct_id"
-              DTS:DTSID="{FE56ECB5-2910-43C3-978F-4CBE5552ABF2}"
+              DTS:DTSID="{BF6A2029-6E77-4C79-9336-373B86752546}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="tran_date"
-              DTS:DTSID="{647D6279-0EE9-4526-A7DC-6D4252A7266C}"
+              DTS:DTSID="{EA040C8A-18FF-4067-A106-6B3C523A3CF3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="145"
               DTS:DataScale="7"
               DTS:TextQualified="True"
               DTS:ObjectName="tran_time"
-              DTS:DTSID="{5EF960D9-A594-413E-9681-6045AEBD23D4}"
+              DTS:DTSID="{DA4FA108-B7F4-47A3-B8AC-F383D021AD0D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="tran_type_id"
-              DTS:DTSID="{48E5C748-349E-435C-9514-0F071803022B}"
+              DTS:DTSID="{1C7D0ED7-D510-4716-89B8-004C831B34FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="5"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="tran_type_code"
-              DTS:DTSID="{C0C3BF6D-D1A6-4603-A864-678348F4E231}"
+              DTS:DTSID="{FF0E5ECC-C482-491B-AF8D-28DC803AF36A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="100"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="tran_type_desc"
-              DTS:DTSID="{FF05A04A-7217-410F-857F-8EF79E65ADB2}"
+              DTS:DTSID="{C4AAE89A-C8A1-4554-A7CA-ADAAF63353C5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="131"
               DTS:DataPrecision="4"
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="tran_fee_prct"
-              DTS:DTSID="{FD5A0DBB-97AF-4E21-8CD2-09750BAA8F32}"
+              DTS:DTSID="{63D4CB8A-9B6C-4042-93E3-CC49045E5995}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:MaximumWidth="1"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cur_cust_req_ind"
-              DTS:DTSID="{7DE06339-AC77-400C-B0D2-29B1A8154F00}"
+              DTS:DTSID="{02D509B4-C153-43F5-B775-DFF01459470A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
+              DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="tran_amt"
-              DTS:DTSID="{0B41E34E-0AD4-49DB-954A-C0CEC5DEB8B5}"
+              DTS:DTSID="{E7D3B840-ECF8-4214-B57F-103C6256501B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +139,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="tran_fee_amt"
-              DTS:DTSID="{63E635D7-0539-476B-9A36-8F88F990B626}"
+              DTS:DTSID="{46B5C49C-55BF-461C-AE2D-80658D71A056}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -5489,7 +5490,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="v_archive_dir">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\archive\</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\txt_files\archive\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -5508,7 +5509,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="v_data_share_root">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\lucas\Documents\Lucas\LDSBC\2021\Winter 2021\IT 243\repos\DFNB_src\txt_files\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -5574,7 +5575,7 @@ ORDER BY 3,4,5;</DTS:VariableValue>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="MsgBox check variable"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -5683,6 +5684,44 @@ ORDER BY 3,4,5;</DTS:VariableValue>
     </VisualStudio>
   </ProjectExtensions>
 </Project>]]></ProjectItem>
+          <ProjectItem
+            Name="My Project\AssemblyInfo.vb"
+            Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_150e3b2feced4e6bb6af44d92c3de82b")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ST_150e3b2feced4e6bb6af44d92c3de82b")> 
+<Assembly: AssemblyCopyright("Copyright @  2021")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("fbb50f93-a5cf-475b-b5b4-bf6c3500900c")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.vb"
             Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
@@ -5809,44 +5848,6 @@ End Class]]></ProjectItem>
   </Profiles>
   <Settings />
 </SettingsFile>]]></ProjectItem>
-          <ProjectItem
-            Name="My Project\AssemblyInfo.vb"
-            Encoding="UTF8"><![CDATA[Imports System
-Imports System.Reflection
-Imports System.Runtime.InteropServices
-
-' General Information about an assembly is controlled through the following 
-' set of attributes. Change these attribute values to modify the information
-' associated with an assembly.
-
-' Review the values of the assembly attributes
-
-<Assembly: AssemblyTitle("ST_150e3b2feced4e6bb6af44d92c3de82b")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ST_150e3b2feced4e6bb6af44d92c3de82b")> 
-<Assembly: AssemblyCopyright("Copyright @  2021")> 
-<Assembly: AssemblyTrademark("")> 
-<Assembly: CLSCompliant(True)> 
-
-<Assembly: ComVisible(False)> 
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("fbb50f93-a5cf-475b-b5b4-bf6c3500900c")> 
-
-' Version information for an assembly consists of the following four values:
-'
-'      Major Version
-'      Minor Version 
-'      Build Number
-'      Revision
-'
-' You can specify all the values or you can default the Build and Revision Numbers 
-' by using the '*' as shown below:
-' <Assembly: AssemblyVersion("1.0.*")>
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
           <ProjectItem
             Name="My Project\Settings.Designer.vb"
             Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
@@ -6265,6 +6266,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:ObjectName="Parent Container">
       <DTS:Variables />
       <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Parent Container\Add constraints and indexes"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{B9D700A8-001A-4AF3-B5D5-8E3F18A9EA2D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Add constraints and indexes"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+              SQLTask:SqlStatementSource="EXEC dbo.usp_HandleRefEnteg 'drop';&#xA;EXEC dbo.usp_HandleRefEnteg 'add';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Parent Container\Branch Tran File Breakout"
           DTS:CreationName="STOCK:SEQUENCE"
@@ -6824,13 +6842,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   DTS:LocaleID="-1"
                   DTS:ObjectName="File System Task"
                   DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-                  DTS:ThreadHint="0">
+                  DTS:ThreadHint="12">
                   <DTS:Variables />
                   <DTS:ObjectData>
                     <FileSystemData
                       TaskOperationType="MoveFile"
                       TaskOverwriteDestFile="True"
-                      TaskSourcePath="{A681601F-0AE1-4E49-8BF1-AAA2A140046B}"
+                      TaskSourcePath="{2F94A7F6-30CC-4B49-BC13-8D2A550A74E7}"
                       TaskDestinationPath="User::v_archive_dir"
                       TaskIsDestinationVariable="True" />
                   </DTS:ObjectData>
@@ -6849,8 +6867,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               <DTS:ForEachVariableMappings>
                 <DTS:ForEachVariableMapping
                   DTS:CreationName=""
-                  DTS:DTSID="{595B23B9-6F0D-4B72-8C19-ED6E08C7F5DA}"
-                  DTS:ObjectName="{595B23B9-6F0D-4B72-8C19-ED6E08C7F5DA}"
+                  DTS:DTSID="{785B24CD-31D5-461C-96F9-23B062919E78}"
+                  DTS:ObjectName="{785B24CD-31D5-461C-96F9-23B062919E78}"
                   DTS:ValueIndex="0"
                   DTS:VariableName="User::v_tran_year" />
               </DTS:ForEachVariableMappings>
@@ -6864,7 +6882,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               DTS:LocaleID="-1"
               DTS:ObjectName="Tran Year List"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="12">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -6899,7 +6917,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:LocaleID="-1"
           DTS:ObjectName="Data Profiling Task"
           DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <DataProfilingTaskData
@@ -6970,6 +6988,222 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
+          DTS:refId="Package\Parent Container\Drop constraints and indexes"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5A2EF407-9A46-4001-8403-36DBEF0F8FAF}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Drop constraints and indexes"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+              SQLTask:SqlStatementSource="EXEC dbo.usp_HandleRefEnteg 'drop';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Parent Container\Load Dimensions"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{9A5E4998-B76D-48A4-9289-FC9ED3AAAFA6}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Dimensions">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Account"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{67E60445-BAFE-4E34-9C46-BD5FF0111DEA}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Account"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadAccountDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Account Customer"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{EB46167B-E809-4A22-B10E-AFFA72A104A5}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Account Customer"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="5">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadAccountCustomerDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Account Customer Role"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{6027088E-51E9-4235-B2B2-C311C187911D}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Account Customer Role"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="6">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadAccountCustomerRoleDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Address"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{9EA623E3-8E8A-4D39-A332-DA36EFBBF4E8}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Address"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="3">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadAddressDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Area"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{87333F11-A514-4105-B19B-9B5F91538E38}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Area"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="4">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadAreaDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Branch"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{BB98AB23-82D3-4916-A382-71A4522F1CC5}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Branch"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="2">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadBranchDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Customer"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{566A14FD-4A37-474B-8CBF-1880775CE506}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Customer"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="7">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadCustomerDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load OrgHier"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{F2370918-C53C-417D-8F9E-44D3CC0F2348}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load OrgHier"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="8">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadOrgHier;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Product"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{F69153F8-77CB-4BF6-8725-0190F45327F3}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Product"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="10">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadProductDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Region"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{FDF8F8AE-B398-477F-AD37-F47B374B5ADB}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Region"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="11">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadRegionDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Dimensions\Load Transaction Type"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{0C485FE6-122C-49D1-A712-AFDA1728BFDA}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Transaction Type"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="9">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadTransactionTypeDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Parent Container\Load dimensions"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Sequence Container"
@@ -6995,6 +7229,52 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                 <SQLTask:SqlTaskData
                   SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
                   SQLTask:SqlStatementSource="EXEC dbo.usp_LoadDateDim 91675;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Parent Container\Load Facts"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{BDED228C-216D-4E60-A44C-CDCBFF6258BA}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Facts">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Facts\Load Account"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{BC39B789-BE16-4DCF-A61A-35AFC5B90D14}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Account"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadAccountFact;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent Container\Load Facts\Load Transaction"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{693B70ED-92FF-4EC7-BA38-BD426211CF6C}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Transaction"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="2">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{2C81CC06-0DC3-4C2B-8670-C39FEFA2062B}"
+                  SQLTask:SqlStatementSource="EXEC dbo.usp_LoadTransactionFact ;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
           </DTS:Executables>
@@ -7036,7 +7316,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               DTS:LocaleID="-1"
               DTS:ObjectName="Load Nums"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="2">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -7298,7 +7578,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   DTS:LocaleID="-1"
                   DTS:ObjectName="Truncate Nums"
                   DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-                  DTS:ThreadHint="2">
+                  DTS:ThreadHint="1">
                   <DTS:Variables />
                   <DTS:ObjectData>
                     <SQLTask:SqlTaskData
@@ -7582,7 +7862,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   DTS:LocaleID="-1"
                   DTS:ObjectName="Truncate Nums"
                   DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-                  DTS:ThreadHint="3">
+                  DTS:ThreadHint="2">
                   <DTS:Variables />
                   <DTS:ObjectData>
                     <SQLTask:SqlTaskData
@@ -31877,7 +32157,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   DTS:LocaleID="-1"
                   DTS:ObjectName="Truncate data"
                   DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-                  DTS:ThreadHint="1">
+                  DTS:ThreadHint="2">
                   <DTS:Variables />
                   <DTS:ObjectData>
                     <SQLTask:SqlTaskData
@@ -32311,7 +32591,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   DTS:LocaleID="-1"
                   DTS:ObjectName="Truncate data"
                   DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-                  DTS:ThreadHint="2">
+                  DTS:ThreadHint="3">
                   <DTS:Variables />
                   <DTS:ObjectData>
                     <SQLTask:SqlTaskData
@@ -32341,7 +32621,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate data"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -32415,6 +32695,38 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 4"
           DTS:To="Package\Parent Container\Load dimensions" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Parent Container.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{B8329F6B-114A-4E75-B89E-D366E0832BD5}"
+          DTS:From="Package\Parent Container\Nums"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\Parent Container\Drop constraints and indexes" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Parent Container.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{2E1F44D4-40B9-420B-9E9B-8884BF1E76FC}"
+          DTS:From="Package\Parent Container\Drop constraints and indexes"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\Parent Container\Load Dimensions" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Parent Container.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{0AAE285F-A527-47BB-8A9C-5EE92B11610E}"
+          DTS:From="Package\Parent Container\Load Dimensions"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\Parent Container\Load Facts" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Parent Container.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{B9D90A8E-0D3F-4AF2-8673-C86868D11ACF}"
+          DTS:From="Package\Parent Container\Load Facts"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\Parent Container\Add constraints and indexes" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -32438,7 +32750,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL LogPackageEnd"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -32474,7 +32786,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL LogPackageStart"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -32874,115 +33186,6 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
               <ProjectItem
-                Name="ScriptMain.vb"
-                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
-'The Script Task allows you to perform virtually any operation that can be accomplished in
-'a .Net application within the context of an Integration Services control flow. 
-
-'Expand the other regions which have "Help" prefixes for examples of specific ways to use
-'Integration Services features within this script task.
-#End Region
-
-
-#Region "Imports"
-Imports System
-Imports System.Data
-Imports System.Math
-Imports Microsoft.SqlServer.Dts.Runtime
-#End Region
-
-'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
-'or parent of this class.
-<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
-<System.CLSCompliantAttribute(False)> _
-Partial Public Class ScriptMain
-    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
-
-#Region "Help:  Using Integration Services variables and parameters in a script"
-    'To use a variable in this script, first ensure that the variable has been added to 
-    'either the list contained in the ReadOnlyVariables property or the list contained in 
-    'the ReadWriteVariables property of this script task, according to whether or not your
-    'code needs to write to the variable.  To add the variable, save this script, close this instance of
-    'Visual Studio, and update the ReadOnlyVariables and 
-    'ReadWriteVariables properties in the Script Transformation Editor window.
-    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
-
-    'Example of reading from a variable:
-    ' startTime = Dts.Variables("System::StartTime").Value
-
-    'Example of writing to a variable:
-    ' Dts.Variables("User::myStringVariable").Value = "new value"
-
-    'Example of reading from a package parameter:
-    ' batchId = Dts.Variables("$Package::batchId").Value
-
-    'Example of reading from a project parameter:
-    ' batchId = Dts.Variables("$Project::batchId").Value
-
-    'Example of reading from a sensitive project parameter:
-    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
-#End Region
-
-#Region "Help:  Firing Integration Services events from a script"
-    'This script task can fire events for logging purposes.
-
-    'Example of firing an error event:
-    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
-
-    'Example of firing an information event:
-    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
-
-    'Example of firing a warning event:
-    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
-#End Region
-
-#Region "Help:  Using Integration Services connection managers in a script"
-    'Some types of connection managers can be used in this script task.  See the topic 
-    '"Working with Connection Managers Programatically" for details.
-
-    'Example of using an ADO.Net connection manager:
-    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
-    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
-    ' <Use the connection in some code here, then release the connection>
-    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
-
-    'Example of using a File connection manager
-    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
-    ' Dim filePath As String = CType(rawConnection, String)
-    ' <Use the connection in some code here, then release the connection>
-    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
-#End Region
-
-    'This method is called when this script task executes in the control flow.
-    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
-    'To open Help, press F1.
-
-    Public Sub Main()
-        Try
-            Dim sVarValue As String = Dts.Variables("VariableValue").Value.ToString
-            Dts.Variables("strVariableValue").Value = sVarValue
-        Catch ex As Exception
-            Dts.Variables("strVariableValue").Value = "Unable to Convert to String: " _
- & ex.Message
-        End Try
-
-        Dts.TaskResult = ScriptResults.Success
-    End Sub
-
-#Region "ScriptResults declaration"
-    'This enum provides a convenient shorthand within the scope of this class for setting the
-    'result of the script.
-
-    'This code was generated automatically.
-    Enum ScriptResults
-        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
-        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
-    End Enum
-
-#End Region
-
-End Class]]></ProjectItem>
-              <ProjectItem
                 Name="ST_41a5b1057a124a7aa4ccf5f454a13b1c.vbproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -33152,6 +33355,115 @@ End Class]]></ProjectItem>
     <msb:File Include="My Project\Settings.Designer.vb" />
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
+              <ProjectItem
+                Name="ScriptMain.vb"
+                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
+'The Script Task allows you to perform virtually any operation that can be accomplished in
+'a .Net application within the context of an Integration Services control flow. 
+
+'Expand the other regions which have "Help" prefixes for examples of specific ways to use
+'Integration Services features within this script task.
+#End Region
+
+
+#Region "Imports"
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Runtime
+#End Region
+
+'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+'or parent of this class.
+<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
+<System.CLSCompliantAttribute(False)> _
+Partial Public Class ScriptMain
+    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+
+#Region "Help:  Using Integration Services variables and parameters in a script"
+    'To use a variable in this script, first ensure that the variable has been added to 
+    'either the list contained in the ReadOnlyVariables property or the list contained in 
+    'the ReadWriteVariables property of this script task, according to whether or not your
+    'code needs to write to the variable.  To add the variable, save this script, close this instance of
+    'Visual Studio, and update the ReadOnlyVariables and 
+    'ReadWriteVariables properties in the Script Transformation Editor window.
+    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
+
+    'Example of reading from a variable:
+    ' startTime = Dts.Variables("System::StartTime").Value
+
+    'Example of writing to a variable:
+    ' Dts.Variables("User::myStringVariable").Value = "new value"
+
+    'Example of reading from a package parameter:
+    ' batchId = Dts.Variables("$Package::batchId").Value
+
+    'Example of reading from a project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").Value
+
+    'Example of reading from a sensitive project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
+#End Region
+
+#Region "Help:  Firing Integration Services events from a script"
+    'This script task can fire events for logging purposes.
+
+    'Example of firing an error event:
+    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
+
+    'Example of firing an information event:
+    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
+
+    'Example of firing a warning event:
+    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
+#End Region
+
+#Region "Help:  Using Integration Services connection managers in a script"
+    'Some types of connection managers can be used in this script task.  See the topic 
+    '"Working with Connection Managers Programatically" for details.
+
+    'Example of using an ADO.Net connection manager:
+    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
+    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
+
+    'Example of using a File connection manager
+    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
+    ' Dim filePath As String = CType(rawConnection, String)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
+#End Region
+
+    'This method is called when this script task executes in the control flow.
+    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+    'To open Help, press F1.
+
+    Public Sub Main()
+        Try
+            Dim sVarValue As String = Dts.Variables("VariableValue").Value.ToString
+            Dts.Variables("strVariableValue").Value = sVarValue
+        Catch ex As Exception
+            Dts.Variables("strVariableValue").Value = "Unable to Convert to String: " _
+ & ex.Message
+        End Try
+
+        Dts.TaskResult = ScriptResults.Success
+    End Sub
+
+#Region "ScriptResults declaration"
+    'This enum provides a convenient shorthand within the scope of this class for setting the
+    'result of the script.
+
+    'This code was generated automatically.
+    Enum ScriptResults
+        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
+        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+    End Enum
+
+#End Region
+
+End Class]]></ProjectItem>
               <ProjectItem
                 Name="My Project\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -33559,11 +33871,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\MsgBox check variable"
-          TopLeft="5.50000000000014,1033.5" />
+          TopLeft="580.5,1546.3" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\Parent Container\Add constraints and indexes"
+          TopLeft="1061.9,1238.3" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Parent Container\Branch Tran File Breakout\Foreach Loop Container\Data Flow Task"
@@ -33634,14 +33950,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="223.2,409.6"
-          Size="223.2,43.2"
+          PanelSize="180.8,409.6"
+          Size="180.8,43.2"
           Id="Package\Parent Container\Branch Tran File Breakout"
-          TopLeft="693.1,518.3" />
+          TopLeft="1315.9,518.3" />
         <NodeLayout
           Size="166.4,41.6"
           Id="Package\Parent Container\Data Profiling Task"
-          TopLeft="5.50000000000004,519.1" />
+          TopLeft="628.1,519.1" />
+        <NodeLayout
+          Size="212.8,41.6"
+          Id="Package\Parent Container\Drop constraints and indexes"
+          TopLeft="1059.9,673.5" />
         <NodeLayout
           Size="147.2,41.6"
           Id="Package\Parent Container\Load dimensions\Load Date Dim"
@@ -33652,11 +33972,77 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="158.4,102.4"
           Size="158.4,145.6"
           Id="Package\Parent Container\Load dimensions"
-          TopLeft="218.5,621.5" />
+          TopLeft="841.1,621.5" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Account"
+          TopLeft="5.50000000000018,5.50000000000007" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Account Customer"
+          TopLeft="207.5,5.50000000000007" />
+        <NodeLayout
+          Size="213.6,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Account Customer Role"
+          TopLeft="457.5,5.50000000000007" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Address"
+          TopLeft="732.1,5.50000000000007" />
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Area"
+          TopLeft="935.1,5.49999999999995" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Branch"
+          TopLeft="1122.5,5.49999999999995" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Customer"
+          TopLeft="1320.5,5.49999999999995" />
+        <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load OrgHier"
+          TopLeft="1530.9,5.49999999999995" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Product"
+          TopLeft="1732.3,5.49999999999984" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Region"
+          TopLeft="1932.5,5.49999999999984" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Parent Container\Load Dimensions\Load Transaction Type"
+          TopLeft="2130.9,5.49999999999984" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="2321.6,102.4"
+          Size="2321.6,145.6"
+          Id="Package\Parent Container\Load Dimensions"
+          TopLeft="5.50000000000023,827.1" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Parent Container\Load Facts\Load Account"
+          TopLeft="5.50000000000001,5.49999999999995" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Parent Container\Load Facts\Load Transaction"
+          TopLeft="208.1,5.49999999999995" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="372,102.4"
+          Size="372,145.6"
+          Id="Package\Parent Container\Load Facts"
+          TopLeft="980.3,1032.7" />
         <NodeLayout
           Size="209.6,41.6"
           Id="Package\Parent Container\LoadNAICSCodeHierDim_lg"
-          TopLeft="422.9,519.1" />
+          TopLeft="1045.5,519.1" />
         <NodeLayout
           Size="131.2,41.6"
           Id="Package\Parent Container\Nums\Load Nums"
@@ -33817,7 +34203,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="414.4,205.6"
           Size="129.6,43.2"
           Id="Package\Parent Container\Nums"
-          TopLeft="232.9,518.3" />
+          TopLeft="855.5,518.3" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Parent Container\Reload raw data - Flat File\Foreach Loop Container\Data Flow Task"
@@ -33989,33 +34375,33 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="786.4,409.6"
           Size="786.4,452.8"
           Id="Package\Parent Container\Reload raw data - Flat File"
-          TopLeft="134.5,5.50000000000009" />
+          TopLeft="757.1,5.49999999999986" />
         <EdgeLayout
           Id="Package\Parent Container.PrecedenceConstraints[Constraint]"
-          TopLeft="294.18,458.3">
+          TopLeft="916.78,458.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-205.48,60.8000000000003"
+              EndConnector="-205.48,60.8000000000001"
               Start="0,0"
-              End="-205.48,53.3000000000003">
+              End="-205.48,53.3000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.5599479091305" />
+                    End="0,13.5599479091304" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.5599479091305"
-                    Point2="0,17.5599479091305"
-                    Point3="-4,17.5599479091305" />
+                    Point1="0,13.5599479091304"
+                    Point2="0,17.5599479091304"
+                    Point3="-4,17.5599479091304" />
                   <mssgle:LineSegment
-                    End="-201.48,17.5599479091305" />
+                    End="-201.48,17.5599479091304" />
                   <mssgle:CubicBezierSegment
-                    Point1="-201.48,17.5599479091305"
-                    Point2="-205.48,17.5599479091305"
-                    Point3="-205.48,21.5599479091305" />
+                    Point1="-201.48,17.5599479091304"
+                    Point2="-205.48,17.5599479091304"
+                    Point3="-205.48,21.5599479091304" />
                   <mssgle:LineSegment
-                    End="-205.48,53.3000000000003" />
+                    End="-205.48,53.3000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34026,30 +34412,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Parent Container.PrecedenceConstraints[Constraint 1]"
-          TopLeft="449.86,458.3">
+          TopLeft="1072.46,458.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-152.16,60.0000000000002"
+              EndConnector="-152.16,60"
               Start="0,0"
-              End="-152.16,52.5000000000002">
+              End="-152.16,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.7043016822853" />
+                    End="0,22.7043016822852" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.7043016822853"
-                    Point2="0,26.7043016822853"
-                    Point3="-4,26.7043016822853" />
+                    Point1="0,22.7043016822852"
+                    Point2="0,26.7043016822852"
+                    Point3="-4,26.7043016822852" />
                   <mssgle:LineSegment
-                    End="-148.16,26.7043016822853" />
+                    End="-148.16,26.7043016822852" />
                   <mssgle:CubicBezierSegment
-                    Point1="-148.16,26.7043016822853"
-                    Point2="-152.16,26.7043016822853"
-                    Point3="-152.16,30.7043016822853" />
+                    Point1="-148.16,26.7043016822852"
+                    Point2="-152.16,26.7043016822852"
+                    Point3="-152.16,30.7043016822852" />
                   <mssgle:LineSegment
-                    End="-152.16,52.5000000000002" />
+                    End="-152.16,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34060,30 +34446,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Parent Container.PrecedenceConstraints[Constraint 2]"
-          TopLeft="605.54,458.3">
+          TopLeft="1228.14,458.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-77.8399999999999,60.8000000000002"
+              EndConnector="-77.8399999999999,60.8000000000001"
               Start="0,0"
-              End="-77.8399999999999,53.3000000000002">
+              End="-77.8399999999999,53.3000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.0603590380491" />
+                    End="0,23.060359038049" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.0603590380491"
-                    Point2="0,27.0603590380491"
-                    Point3="-4,27.0603590380491" />
+                    Point1="0,23.060359038049"
+                    Point2="0,27.060359038049"
+                    Point3="-4,27.060359038049" />
                   <mssgle:LineSegment
-                    End="-73.8399999999999,27.0603590380491" />
+                    End="-73.8399999999999,27.060359038049" />
                   <mssgle:CubicBezierSegment
-                    Point1="-73.8399999999999,27.0603590380491"
-                    Point2="-77.8399999999999,27.0603590380491"
-                    Point3="-77.8399999999999,31.0603590380491" />
+                    Point1="-73.8399999999999,27.060359038049"
+                    Point2="-77.8399999999999,27.060359038049"
+                    Point3="-77.8399999999999,31.060359038049" />
                   <mssgle:LineSegment
-                    End="-77.8399999999999,53.3000000000002" />
+                    End="-77.8399999999999,53.3000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34094,13 +34480,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Parent Container.PrecedenceConstraints[Constraint 3]"
-          TopLeft="761.22,458.3">
+          TopLeft="1383.82,458.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.48,60.0000000000001"
+              EndConnector="22.48,60"
               Start="0,0"
-              End="43.48,52.5000000000001">
+              End="22.48,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -34111,13 +34497,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point2="0,17.3288959629576"
                     Point3="4,17.3288959629576" />
                   <mssgle:LineSegment
-                    End="39.48,17.3288959629576" />
+                    End="18.48,17.3288959629576" />
                   <mssgle:CubicBezierSegment
-                    Point1="39.48,17.3288959629576"
-                    Point2="43.48,17.3288959629576"
-                    Point3="43.48,21.3288959629576" />
+                    Point1="18.48,17.3288959629576"
+                    Point2="22.48,17.3288959629576"
+                    Point3="22.48,21.3288959629576" />
                   <mssgle:LineSegment
-                    End="43.48,52.5000000000001" />
+                    End="22.48,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34128,18 +34514,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Parent Container.PrecedenceConstraints[Constraint 4]"
-          TopLeft="297.7,561.5">
+          TopLeft="900.033333333333,561.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="20.2666666666668,59.9999999999999"
               Start="0,0"
-              End="0,52.5">
+              End="20.2666666666668,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,20.4390243902439" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4390243902439"
+                    Point2="0,24.4390243902439"
+                    Point3="4,24.4390243902439" />
+                  <mssgle:LineSegment
+                    End="16.2666666666668,24.4390243902439" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.2666666666668,24.4390243902439"
+                    Point2="20.2666666666668,24.4390243902439"
+                    Point3="20.2666666666668,28.4390243902439" />
+                  <mssgle:LineSegment
+                    End="20.2666666666668,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34148,38 +34546,65 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="926.4,822.4"
-          Size="926.4,865.6"
-          Id="Package\Parent Container"
-          TopLeft="133.7,107.1" />
-        <AnnotationLayout
-          Text="/*****************************************************************************************************************&#xA;NAME:    LoadDFNB3.dtsx&#xA;PURPOSE: Load the DFNB3 Data Warehouse&#xA;MODIFICATION LOG:&#xA;Ver      Date        Author        Description&#xA;-----   ----------   -----------   -------------------------------------------------------------------------------&#xA;1.0     3/26/2021  LLUCAS2020      1. Built this package for IT 243&#xA;2.0     3/26/2021  LLUCAS2020      2. Added all flat files.&#xA;3.0     3/26/2021  LLUCAS2020      3. Tried adding the expressions, but it still won't work.&#xA;4.0     3/26/2021  LLUCAS2020      4. Waiting on more feedback to make changes.&#xA;&#xA;RUNTIME: &#xA;Approx. 1 min&#xA;NOTES: This is going to be saved on my repository, so I can easily find it when I need to use the header again.&#xA;These are the varioius Extract, Transform, and Load steps needed for the Example Data&#xA;LICENSE: This code is covered by the GNU General Public License which guarantees end users&#xA;the freedom to run, study, share, and modify the code. This license grants the recipients&#xA;of the code the rights of the Free Software Definition. All derivative work can only be&#xA;distributed under the same license terms.&#xA; &#xA;******************************************************************************************************************/"
-          ParentId="Package\Sequence Container"
-          FontInfo="{assembly:Null}"
-          Size="607.2,NaN"
-          Id="6abdc2de-eea1-4c2a-a6dd-9c713a1aed34"
-          TopLeft="90.2999921520553,17.2666709301208" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="703.2,431.2"
-          Size="196.8,43.2"
-          Id="Package\Sequence Container"
-          TopLeft="250.5,1032.7" />
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\SQL LogPackageEnd"
-          TopLeft="507.7,1033.5" />
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\SQL LogPackageStart"
-          TopLeft="506.1,5.49999999999995" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="596.9,47.1">
+          Id="Package\Parent Container.PrecedenceConstraints[Constraint 5]"
+          TopLeft="940.566666666667,561.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="225.733333333333,112"
+              Start="0,0"
+              End="225.733333333333,104.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.6195121951219" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.6195121951219"
+                    Point2="0,45.6195121951219"
+                    Point3="4,45.6195121951219" />
+                  <mssgle:LineSegment
+                    End="221.733333333333,45.6195121951219" />
+                  <mssgle:CubicBezierSegment
+                    Point1="221.733333333333,45.6195121951219"
+                    Point2="225.733333333333,45.6195121951219"
+                    Point3="225.733333333333,49.6195121951219" />
+                  <mssgle:LineSegment
+                    End="225.733333333333,104.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Parent Container.PrecedenceConstraints[Constraint 6]"
+          TopLeft="1166.3,715.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,112"
+              Start="0,0"
+              End="0,104.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,104.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Parent Container.PrecedenceConstraints[Constraint 7]"
+          TopLeft="1166.3,972.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -34200,8 +34625,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Parent Container.PrecedenceConstraints[Constraint 8]"
+          TopLeft="1166.3,1178.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000005"
+              Start="0,0"
+              End="0,52.5000000000005">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000005" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="2332.8,1335.2"
+          Size="2332.8,1378.4"
+          Id="Package\Parent Container"
+          TopLeft="5.5,107.100000000001" />
+        <AnnotationLayout
+          Text="/*****************************************************************************************************************&#xA;NAME:    LoadDFNB3.dtsx&#xA;PURPOSE: Load the DFNB3 Data Warehouse&#xA;MODIFICATION LOG:&#xA;Ver      Date        Author        Description&#xA;-----   ----------   -----------   -------------------------------------------------------------------------------&#xA;1.0     3/26/2021  LLUCAS2020      1. Built this package for IT 243&#xA;2.0     3/26/2021  LLUCAS2020      2. Added all flat files.&#xA;3.0     3/26/2021  LLUCAS2020      3. Tried adding the expressions, but it still won't work.&#xA;4.0     3/26/2021  LLUCAS2020      4. Waiting on more feedback to make changes.&#xA;&#xA;RUNTIME: &#xA;Approx. 1 min&#xA;NOTES: This is going to be saved on my repository, so I can easily find it when I need to use the header again.&#xA;These are the varioius Extract, Transform, and Load steps needed for the Example Data&#xA;LICENSE: This code is covered by the GNU General Public License which guarantees end users&#xA;the freedom to run, study, share, and modify the code. This license grants the recipients&#xA;of the code the rights of the Free Software Definition. All derivative work can only be&#xA;distributed under the same license terms.&#xA; &#xA;******************************************************************************************************************/"
+          ParentId="Package\Sequence Container"
+          FontInfo="{assembly:Null}"
+          Size="607.2,NaN"
+          Id="6abdc2de-eea1-4c2a-a6dd-9c713a1aed34"
+          TopLeft="90.2999921520553,17.2666709301208" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="703.2,431.2"
+          Size="196.8,43.2"
+          Id="Package\Sequence Container"
+          TopLeft="825.5,1545.5" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\SQL LogPackageEnd"
+          TopLeft="1082.7,1546.3" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\SQL LogPackageStart"
+          TopLeft="1081.1,5.50000000000018" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="1171.9,47.1000000000002">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000004"
+              Start="0,0"
+              End="0,52.5000000000004">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000004" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="596.9,972.7">
+          TopLeft="1171.9,1485.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -35051,15 +35549,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Parent Container\Reload raw data - Flat File\Organization Hierarchy\Load data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="184.8,41.6"
-          Id="Package\Parent Container\Reload raw data - Flat File\Organization Hierarchy\Load data\Organization Hierarchy"
-          TopLeft="5.50000000000001,5.49999999999995" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,41.6"
           Id="Package\Parent Container\Reload raw data - Flat File\Organization Hierarchy\Load data\stg_ORG_HIER"
           TopLeft="21.9,107.1" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Parent Container\Reload raw data - Flat File\Organization Hierarchy\Load data\Organization Hierarchy"
+          TopLeft="5.50000000000001,5.49999999999995" />
         <EdgeLayout
           Id="Package\Parent Container\Reload raw data - Flat File\Organization Hierarchy\Load data.Paths[Flat File Source Output]"
           TopLeft="97.9,47.1">
@@ -35079,7 +35577,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -35102,15 +35602,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Parent Container\Reload raw data - Flat File\Product Profiles\Load data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Parent Container\Reload raw data - Flat File\Product Profiles\Load data\Product Profiles csv"
-          TopLeft="23.5,5.49999999999995" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="206.4,41.6"
           Id="Package\Parent Container\Reload raw data - Flat File\Product Profiles\Load data\stg_PRODUCT_PROFILES"
           TopLeft="5.50000000000001,107.1" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Parent Container\Reload raw data - Flat File\Product Profiles\Load data\Product Profiles csv"
+          TopLeft="23.5,5.49999999999995" />
         <EdgeLayout
           Id="Package\Parent Container\Reload raw data - Flat File\Product Profiles\Load data.Paths[Flat File Source Output]"
           TopLeft="108.7,47.1">
@@ -35130,7 +35630,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
